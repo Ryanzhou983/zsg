@@ -1,0 +1,72 @@
+﻿<Window x:Class="zsg.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zsg"
+        mc:Ignorable="d"
+        Title="Settings" Height="450" Width="800" >
+    <Grid>
+
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="236" Margin="10,176,0,0" Stroke="#FFDCD5D5" VerticalAlignment="Top"  Width="772"/>
+
+        <Rectangle HorizontalAlignment="Left" Height="93" Margin="10,176,0,0" Stroke="#FFBDB5B5" VerticalAlignment="Top" Width="772" />
+
+        <Label Content="栏目名称" HorizontalAlignment="Left" Margin="38,187,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="l_name"  HorizontalAlignment="Left" Height="22" Margin="95,189,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="269"/>
+        <Label Content="栏目封面" HorizontalAlignment="Left" Margin="39,225,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="l_face"  HorizontalAlignment="Left" Height="23" Margin="95,226,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="227"/>
+        <Label Content="栏目路径" HorizontalAlignment="Left" Margin="429,185,0,0" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="l_path" HorizontalAlignment="Left" Height="23" Margin="491,185,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="219"/>
+        <Button x:Name="bt_del"  Content="删除" HorizontalAlignment="Left" Height="37" Margin="558,361,0,0" VerticalAlignment="Top" Width="85" Click="Bt_del_Click"/>
+        <Button x:Name="bt_mod"  Content="修改" HorizontalAlignment="Left" Height="37" Margin="449,361,0,0" VerticalAlignment="Top" Width="85" Click="Bt_mod_Click"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Height="159" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" SelectionChanged="listView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="栏目名称"  Width="120" x:Name="column">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding 栏目}" TextAlignment="Center" MinWidth="{Binding ActualWidth, ElementName=column}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="栏目封面" Width="280" x:Name="column1">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding 封面}" TextAlignment="Center" MinWidth="{Binding ActualWidth, ElementName=column1}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="文件夹" Width="auto"  x:Name="column2">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding 文件夹}" TextAlignment="Center" MinWidth="{Binding ActualWidth, ElementName=column1}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="bt_add"  Content="添加" HorizontalAlignment="Left" Height="37" Margin="340,361,0,0" VerticalAlignment="Top" Width="85" Click="Bt_add_Click"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="327,226,0,0" VerticalAlignment="Top" Width="37" Click="Button_Click"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="715,186,0,0" VerticalAlignment="Top" Width="37" Click="Button_Click_1"/>
+        <Label Content="视频路径" HorizontalAlignment="Left" Margin="37,298,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="video_path"  HorizontalAlignment="Left" Height="24" Margin="94,299,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="253,300,0,0" VerticalAlignment="Top" Width="37" Click="Button_Click_2"/>
+        <Button Content="保存" HorizontalAlignment="Left" Margin="667,361,0,0" VerticalAlignment="Top" Width="85" Height="37" Click="Button_Click_3"/>
+        <Label Content="导航页背景" HorizontalAlignment="Left" Margin="25,372,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="app_bg"  HorizontalAlignment="Left" Height="23" Margin="94,373,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="253,373,0,0" VerticalAlignment="Top" Width="37" Click="Button_Click_4"/>
+        <Label Content="视频背景" HorizontalAlignment="Left" Margin="37,336,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="video_bg"  HorizontalAlignment="Left" Height="22" Margin="94,338,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="253,337,0,0" VerticalAlignment="Top" Width="37" Click="Button_Click_5"/>
+        <Label Content="导航按钮1名称" HorizontalAlignment="Left" Margin="336,300,0,0" VerticalAlignment="Top"/>
+        <TextBox  x:Name="bt_nv1" HorizontalAlignment="Left" Height="23" Margin="425,301,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="327" RenderTransformOrigin="6.931,-1.309"/>
+        <Label Content="导航按钮2名称" HorizontalAlignment="Left" Margin="334,328,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="bt_nv2" HorizontalAlignment="Left" Height="23" Margin="425,329,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="327"/>
+        <Label Content="背景音乐" HorizontalAlignment="Left" Margin="428,225,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="l_bgmusic"  HorizontalAlignment="Left" Height="23" Margin="491,227,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="219"/>
+        <Button Content="..." HorizontalAlignment="Left" Margin="715,227,0,0" VerticalAlignment="Top" Width="37" Click="Button_bgmusic_Click"/>
+
+    </Grid>
+</Window>

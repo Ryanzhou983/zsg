@@ -1,0 +1,6 @@
+﻿<NavigationWindow x:Class="zsg.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="站史馆导览系统" Height="1080" Width="1920" ShowsNavigationUI="False" Source="MainWindow.xaml"   WindowState="Maximized"   WindowStyle="None">
+
+</NavigationWindow>

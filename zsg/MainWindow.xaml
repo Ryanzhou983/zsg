@@ -1,0 +1,82 @@
+﻿<Page x:Class="zsg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:zsg"
+        mc:Ignorable="d"
+        Title="MainWindow"   d:DesignHeight="1080" d:DesignWidth="1920">
+
+    <Grid  x:Name="grd1" MouseLeftButtonUp="Grid_MouseLeftButtonUp" TouchDown="Grid_TouchDown" TouchMove="Grd1_TouchMove" TouchUp="Grd1_TouchUp">
+        <Image x:Name="bgpic" HorizontalAlignment="Left" Height="1080" Margin="0,0,0,0" VerticalAlignment="Top" Width="1920"/>
+        <DockPanel x:Name="dp1" HorizontalAlignment="Center" VerticalAlignment="Bottom"  Panel.ZIndex="999" Width="1204" >
+            <Button x:Name="BtnPop5" Width="200" Height="86" HorizontalAlignment="Center" VerticalAlignment="top" Content="图片" Margin="20,0,20,0" Click="Button_Click_1" FontSize="24">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC7C827" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Effect>
+                    <DropShadowEffect Color="#FF8B8A82" Opacity="0.9"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="BT_video" Content="视频" HorizontalAlignment="Center" Margin="20 0 20 20" VerticalAlignment="Top" Width="200" Height="86" Click="BT_video_Click"  FontSize="24">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC7C827" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Effect>
+                    <DropShadowEffect Color="#FF8B8A82" Opacity="0.9"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="BT_SET" Content="设置" HorizontalAlignment="Center" Margin="20 0 20 20" VerticalAlignment="Top" Width="200" Height="86" Click="BT_SET_Click"  FontSize="24" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC7C827" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Effect>
+                    <DropShadowEffect Color="#FF8B8A82" Opacity="0.9"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="BT_tip" Content="操作提示" HorizontalAlignment="Center" Margin="20 0 20 20" VerticalAlignment="Top" Width="200" Height="86" Click="BT_tip_Click"  FontSize="24" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC7C827" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Effect>
+                    <DropShadowEffect Color="#FF8B8A82" Opacity="0.9"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="BT_EXT" Content="退出"  HorizontalAlignment="Center" Margin="20 0 20 20"  VerticalAlignment="Top" Width="200" Height="86" Click="BT_EXT_Click"  FontSize="24" >
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFC7C827" Offset="1"/>
+                        <GradientStop Color="White"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+                <Button.Effect>
+                    <DropShadowEffect Color="#FF8B8A82" Opacity="0.9"/>
+                </Button.Effect>
+            </Button>
+
+            <Popup x:Name="Pop5" PopupAnimation="Slide" Width="200"  PlacementTarget="{Binding ElementName=BtnPop5}" Placement="Top" AllowsTransparency="True" StaysOpen="False">
+                <Border Background="#FFCFCFCF" CornerRadius="5" BorderBrush="#FF000000" BorderThickness="1">
+                    <StackPanel x:Name="pop_c" Margin="5">
+
+
+                    </StackPanel>
+                </Border>
+            </Popup>
+        </DockPanel>
+
+
+
+    </Grid>
+</Page>
